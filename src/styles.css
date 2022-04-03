@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; margin: 0;}
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* layout Form */
+.example-container{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-container {
+    justify-content: center;
+    width: 80%;
+    background-color: #d1d1d1;
+    border: 1px solid rgb(0 0 0 / 17%) !important;
+    border-radius: 10px !important;
+    box-shadow: 3px -3px 16px grey;
+  
+  }
+  
+  .legend{
+    background-color: #bbbbbbe3;
+    border: 1px solid rgb(0 0 0 / 5%);
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 2px -4px 8px #ffffff12;
+  
+  }
+  
+  .form-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  
+  .form-fields{
+    margin-top: 2%;
+    width: 90%;
+    align-self: center;
+    background-color: #ffffffab;
+    border-radius: 7px 7px ;
+  
+  }
+
+  /* End layout Form */

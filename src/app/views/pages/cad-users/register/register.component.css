@@ -1,0 +1,29 @@
+
+
+.input-age {
+  width: 135px;
+}
+
+h4{
+  margin-bottom: 0;
+}
+
+button{
+  width: 125px;
+}
+
+mat-form-field-outline .ng-tns-c82-1 .ng-star-inserted {
+  background-color: white;
+}
+
+@media (max-width: 576px) { 
+  button{
+    width: 100%;
+  } 
+
+
+  .input-age {
+    width: 50% !important;
+  }
+}
+

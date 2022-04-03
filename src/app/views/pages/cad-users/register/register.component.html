@@ -1,0 +1,37 @@
+
+<div class="example-container">
+    <div class="form-container d-flex flex-column border rounded">
+        <div class="legend border-opacity-40">
+            <div class="form-title d-flex flex-row m-4">
+                <div class="text-title">
+                    <h4>{{title}}</h4>
+                </div>
+                
+                <a href="/lista" mat-raised-button matTooltip="Voltar para lista" class="btn btn-secondary">Voltar</a>
+            </div>
+        </div>
+    
+
+        <div class="form-fields m-4">  
+            <form [formGroup]="dataForm" (submit)="submit()" class="d-flex flex-column m-4">
+                <mat-form-field class="form-field col-12" appearance="outline">
+                    <mat-label> Nome </mat-label>
+                    <input matInput formControlName="nome" required>
+                    <mat-error *ngIf="dataForm.controls?.['nome']?.touched && dataForm.controls?.['nome']?.invalid">
+                        <span *ngIf="dataForm.controls?.['nome']?.errors?.['required']">Campo obrigatório.</span>
+                    </mat-error>
+                </mat-form-field>
+                
+                <mat-form-field class="form-field input-age mt-4 " appearance="outline">
+                    <mat-label> Idade </mat-label>
+                    <input matInput formControlName="idade" mask="00" required>
+                    <mat-error *ngIf="dataForm.controls?.['idade']?.touched && dataForm.controls?.['idade']?.invalid">
+                        <span *ngIf="dataForm.controls?.['idade']?.errors?.['required']">Campo obrigatório.</span>
+                    </mat-error>
+                </mat-form-field>
+                
+                <button [disabled]="loading" class="btn btn-primary mt-5">{{!idUrl ? 'Cadastrar': 'Salvar'}}</button>
+            </form>
+        </div>
+    </div>
+</div>
